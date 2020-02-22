@@ -1,7 +1,7 @@
 FROM centos:latest
 MAINTAINER Nathanael Noblet <nathanael@noblet.ca>
 
-RUN yum -C install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm http://rpms.famillecollet.com/enterprise/7/remi/x86_64/remi-release-7.6-2.el7.remi.noarch.rpm && rm -rf /var/cache/yum/* && rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7 /etc/pki/rpm-gpg/RPM-GPG-KEY-remi /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
+RUN yum -C install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm http://rpms.famillecollet.com/enterprise/7/remi/x86_64/remi-release-7.7-2.el7.remi.noarch.rpm && rm -rf /var/cache/yum/* && rpm --import /etc/pki/rpm-gpg/RPM-GPG-KEY-EPEL-7 /etc/pki/rpm-gpg/RPM-GPG-KEY-remi /etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-7
 
 RUN yum-config-manager --enable remi,remi-php73 && yum clean all
 
